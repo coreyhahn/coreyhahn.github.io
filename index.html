@@ -2,4 +2,43 @@
 layout: default
 title: Home
 ---
-<h1>{{ "Hello World!" | downcase }}</h1>
+<h1>Median Sorting Networks > 64 Items</h1>
+<p>Inspired by <a href=https://bertdobbelaere.github.io/median_networks.html>Median Sorting Networks <= 64. </a></p>
+<p>Occasionally in FPGA design fast parallel median calculations are desired.  Large modern FPGAs allow these algorithms to be implemented allowing for fast median calculations
+Optimizing a large median filter to utilize as few comparisons as possible allows for smaller footprints and faster clocks.</p>
+
+<p>One options is to split a median data set into 2 half size sorts and then use a final 40 pair comparison to calculate the median.</p>
+<p>Below is my work inspired by bertdobbelaere.  I implemented a greedy network finder and the best results so far are listed below.</p>
+
+<p>I will post the greedy algorithm when I generalize for 64 < m < 129</p>
+
+<h3>Summary Table</h3>
+
+<table>
+<tbody>
+<tr>
+<th>Number of inputs</th>
+<th>(Size,Depth) Combinations</th>
+<th>Comments</th>
+</tr>
+<tr>
+<td class="idx">81</td>
+<td class="idx">(498,30)</td>
+<td class="idx">Greedy</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Individual Networks</h3>
+<table id="Networks">
+<tbody>
+<tr>
+<td>81 Inputs, 498 CEs, 30 layers
+<br>
+<p>Place network here</p>
+</td>
+<td><img src="assets/images/net4_20240212b.png" alt="Median 81 498,30" style="width:600x;height:480px;">
+</td>
+</tr>
+</tbody>
+</table>
